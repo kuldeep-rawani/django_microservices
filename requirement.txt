@@ -1,0 +1,2 @@
+pip install awscli boto3 -U --ignore-installed six
+sudo apt-get install python-werkzeug

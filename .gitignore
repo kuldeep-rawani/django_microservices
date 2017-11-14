@@ -1,0 +1,5 @@
+*.pyc
+migrations
+env.py
+venv/
+env/
