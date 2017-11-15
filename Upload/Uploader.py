@@ -48,8 +48,8 @@ class Uploader():
             })
 
 	def generate_self_link(self, file_detail):
-		selfLink = "https://s3.amazonaws.com/{0}/{1}/{2}".format(self.bucket_name, self.bucket_directory, file_detail['name'])
+		selfLink = "https://s3-ap-southeast-1.amazonaws.com/{0}/{1}/{2}".format(self.bucket_name, self.bucket_directory, file_detail['name'])
 		return selfLink
 
 	def download_from_s3(self):
-		return self.s3.download_file(self.bucket_name, 'November2017/SunNov1207364620171510472206223.jpeg', '/home/kuldeep/Desktop/hello.jpeg')
+		return self.s3.download_file(self.bucket_name, 'November2017/SunNov1207364620171510472206223.jpe	g', '/home/kuldeep/Desktop/hello.jpeg')
