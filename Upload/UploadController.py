@@ -52,10 +52,11 @@ def download(request):
 # to get all self links
 def get_all_self_links(request):
 	if request.method == 'GET':
-		category = str(request.GET.get('category'))
+		category = request.GET.get('category')
 		if category is not None:
 			from models import Uploads
-			data = Uploads.objects.all().filter(category='thanksgiving').values()
+			print category, type(category)
+			data = Uploads.objects.filter(category=category).values()
 			return respondWithCollection(200, data, UploadTransformer)
 		return respondWithError(421, 'you must provide a category')
 	return respondWithError(404, 'method not found')	

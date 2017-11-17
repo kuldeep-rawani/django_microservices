@@ -17,7 +17,7 @@ class Uploader():
 		self.s3 = boto3.client('s3', aws_access_key_id = AWS_ACCESS_KEY_ID, aws_secret_access_key = AWS_ACCESS_KEY_SECRET)
 		self.bucket_name = AWS_BUCKET
 		self.upload_folder = UPLOAD_FOLDER
-		self.bucket_directory = 'thanksgiving'
+		self.bucket_directory = 'testing'
 	def upload_to_aws(self):
 		file_detail = self.get_file_detail()
 		upload = self.upload(file_detail)
